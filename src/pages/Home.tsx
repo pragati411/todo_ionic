@@ -10,7 +10,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import React, { useEffect, useState } from "react";
-import "./Home.css";
+
 import { SQLiteDBConnection } from "@capacitor-community/sqlite";
 import useSQLiteDB from "../composables/useSQLiteDB";
 import useConfirmationAlert from "../composables/useConfirmationAlert";
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
       performSQLAction(
         async (db: SQLiteDBConnection | undefined) => {
           await db?.query(`INSERT INTO test (id,name) values (?,?);`, [
-            Date.now(),
+            Date.now(), // timestamp
             inputName,
           ]);
 

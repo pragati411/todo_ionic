@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       const jeepSqliteEl = document.createElement("jeep-sqlite");
       document.body.appendChild(jeepSqliteEl);
       await customElements.whenDefined("jeep-sqlite");
-      console.log(`after customElements.whenDefined`);
+      console.log(`afted`);
 
       // Initialize the Web store
       await sqlite.initWebStore();
